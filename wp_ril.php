@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: WP Examples Gallery
- * Plugin Author: Ray Flores
- * Author URL: https://rayflores.com
+ * Author: Ray Flores
+ * Author URI: https://rayflores.com
  */
-add_filter( 'shortcode_atts_gallery', 'wpse246345_shortcode_atts_gallery', 10, 4 );
-function wpse246345_shortcode_atts_gallery( $out, $pairs, $atts, $shortcode ) {
+add_filter( 'shortcode_atts_gallery', 'custom_shortcode_atts_gallery', 10, 4 );
+function custom_shortcode_atts_gallery( $out, $pairs, $atts, $shortcode ) {
 
     if ( ! isset( $atts['columns'] )  ) {
         $out['columns'] = 5;
